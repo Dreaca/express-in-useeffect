@@ -16,4 +16,10 @@ app.post('/post',(req, res) => {
     console.log(req.body)
     res.send("Hello Post! "+ req.body);
 })
-app.listen(3000);
+app.post('/add',(req, res) => {
+    console.log(req.body)
+    res.json(req.body);
+})
+app.listen(3000,()=>{
+    console.log("Server started on port 3000");
+});
